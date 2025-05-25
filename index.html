@@ -1,0 +1,90 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Sayangg Kuu</title>
+  <style>
+    body {
+      margin: 0;
+      background: pink;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      color: #fff;
+      overflow: hidden;
+    }
+    h1 {
+      text-align: center;
+      font-size: 3em;
+      margin-top: 30px;
+      color: #ff1493;
+      animation: shake 1s infinite alternate;
+    }
+    p {
+      width: 90%;
+      max-width: 700px;
+      margin: 20px auto;
+      font-size: 1.3em;
+      color: #fff0f5;
+      line-height: 1.6em;
+    }
+    @keyframes shake {
+      0% { transform: translateX(0px); }
+      100% { transform: translateX(5px); }
+    }
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      transform: rotate(-45deg);
+      animation: float 6s linear infinite;
+    }
+    .heart::before, .heart::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      border-radius: 50%;
+    }
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+    .heart::after {
+      left: 10px;
+      top: 0;
+    }
+    @keyframes float {
+      0% { transform: translateY(100vh) rotate(-45deg); opacity: 1; }
+      100% { transform: translateY(-10vh) rotate(-45deg); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Happy Birthday Sayangg Kuu!</h1>
+  <p>
+    yeyyy sekarangg udaa jadii hari spesiall kamuu lohhh ehehee, tapiii kaloo buat akuu,
+    setiapp harii kaloo barengg kamuu selaluu jadii harii istimewaa ehehe. makasii yyaa sayyaangg karenaa
+    udaaa hadirr dii hidupp akuu, masukk ke duniaa akuu, membawa tawaa, ketenangann, dan cintaa yang enggaa
+    pernahh akuu bayanginn sebelumnyaa.<br><br>
+    Akuu doainn semuaa impiann kamuu tercapaii, semuaa harapann kamuu jadii nyataa, dann semogaa akuu
+    selaluu bisaa jadii bagiann darii perjalanann ituu ehehe. Tetap jadii kamuu yangg hangatt, kuatt, dan
+    penuh cintaa, yyaa.<br><br>
+    Aku sayang kamu, i loveeeeee youuu moreee thann the stars lovee thee nightt sayyangg<br>
+    Selamat ulang tahun, sayangkuu.
+  </p>  <audio autoplay loop>
+    <source src="happy_birthday_music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>  <script>
+    // Confetti & Hearts generator
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.style.left = Math.random() * window.innerWidth + 'px';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 6000);
+    }
+
+    setInterval(createHeart, 300);
+  </script></body>
+</html>
